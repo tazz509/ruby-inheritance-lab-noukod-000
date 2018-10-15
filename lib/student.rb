@@ -1,14 +1,16 @@
-require 'user.rb'
-class Student
+class Student < User
 
-def initialize
-  @@KNOWLEDGE = []
-end
+  attr_accessor :knowledge
 
-def learn
+  def initialize
+    @knowledge = []
+  end
 
-end
+  def learn(knowledge)
+    @knowledge << knowledge
+  end
 
-def knowledge
-  KNOWLEDGE
+  def knowledge
+    @knowledge
+  end
 end
